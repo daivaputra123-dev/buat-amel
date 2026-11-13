@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Untuk Amel 💐</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#4a2417;--card:rgba(255,255,255,.9);--pink:#ff5d8f;--peach:#ff9a76;--lilac:#9b6bff;--sun:#ffcf4a;--mint:#2ed3b7;--g1:#ffd1e8;--g2:#d9c8ff;--g3:#ffe9a8;--g4:#b8f3e6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#fff3ea;--card:rgba(52,24,48,.88);--g1:#5b1f4d;--g2:#2f2468;--g3:#5a3a1c;--g4:#0f4a45}}
+:root[data-theme="dark"]{--ink:#fff3ea;--card:rgba(52,24,48,.88);--g1:#5b1f4d;--g2:#2f2468;--g3:#5a3a1c;--g4:#0f4a45}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100%;font-family:'Fredoka',system-ui,sans-serif;color:var(--ink);background:linear-gradient(120deg,var(--g1),var(--g2),var(--g3),var(--g4),var(--g1));background-size:400% 400%;animation:bg 18s ease infinite;overflow-x:hidden}
+@keyframes bg{50%{background-position:100% 50%}}
+.fall{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.fall span{position:absolute;top:-12vh;animation:fall linear infinite;will-change:transform}
+.fall .once{animation-iteration-count:1;animation-fill-mode:forwards}
+@keyframes fall{to{transform:translate3d(var(--dx,30px),118vh,0) rotate(360deg)}}
+.stage{display:none;position:relative;z-index:2;min-height:100vh;min-height:100dvh;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.2rem;gap:1.2rem}
+.stage.active{display:flex;animation:in .6s ease both}
+@keyframes in{from{opacity:0;transform:scale(.94)}}
+h1{font-family:'Pacifico',cursive;font-weight:400;font-size:clamp(2rem,8vw,3.8rem);line-height:1.25;margin:0;max-width:16ch;text-shadow:0 2px 0 rgba(255,255,255,.5)}
+p{margin:0;font-size:clamp(1.05rem,3.4vw,1.35rem);line-height:1.5;max-width:30ch}
+.btn{min-height:3rem;padding:.7rem 1.8rem;border:0;border-radius:999px;font:600 1.1rem 'Fredoka',sans-serif;color:#fff;cursor:pointer;background:linear-gradient(135deg,var(--pink),var(--peach));box-shadow:0 8px 20px rgba(255,93,143,.4);transition:transform .2s,font-size .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,.env:focus-visible{outline:3px solid var(--lilac);outline-offset:3px}
+.btn.alt{background:linear-gradient(135deg,var(--lilac),var(--mint));box-shadow:0 8px 20px rgba(155,107,255,.35)}
+.bouquet{font-size:clamp(2.2rem,9vw,3.4rem);letter-spacing:.2rem}
+.bouquet span{display:inline-block;animation:bob 2.4s ease-in-out infinite}
+.bouquet span:nth-child(2){animation-delay:.3s}.bouquet span:nth-child(3){animation-delay:.6s}.bouquet span:nth-child(4){animation-delay:.9s}.bouquet span:nth-child(5){animation-delay:1.2s}
+@keyframes bob{50%{transform:translateY(-.5rem) rotate(6deg)}}
+.env{position:relative;width:min(68vw,270px);aspect-ratio:1.4;background:linear-gradient(160deg,var(--peach),var(--sun));border-radius:12px;box-shadow:0 14px 30px rgba(74,36,23,.25);cursor:pointer;border:0;padding:0;font-size:inherit;perspective:600px}
+.env .letter{position:absolute;left:9%;right:9%;top:10%;bottom:8%;background:#fff;border-radius:6px;display:grid;place-items:center;font-size:2rem;transition:transform .8s .3s}
+.env .flap{position:absolute;left:0;right:0;top:0;height:58%;background:var(--pink);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .7s;z-index:2}
+.env .seal{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);font-size:2.2rem;z-index:3;transition:opacity .3s;animation:beat 1.2s infinite}
+@keyframes beat{50%{transform:translate(-50%,-50%) scale(1.2)}}
+.env.open .flap{transform:rotateX(180deg)}
+.env.open .letter{transform:translateY(-42%)}
+.env.open .seal{opacity:0}
+.card{background:var(--card);border-radius:28px;padding:2rem 1.5rem;width:min(92vw,420px);min-height:15rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;box-shadow:0 16px 40px rgba(74,36,23,.18);border:3px solid var(--sun)}
+.card .big{font-size:4rem;animation:bob 2.4s ease-in-out infinite}
+.card.pop{animation:in .5s ease both}
+.dots{display:flex;gap:.5rem}
+.dots i{width:.7rem;height:.7rem;border-radius:50%;background:var(--ink);opacity:.2;transition:.3s}
+.dots i.on{background:var(--pink);opacity:1;transform:scale(1.3)}
+.row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1rem;min-height:6rem}
+#yes{font-size:1.2rem}
+#no{background:linear-gradient(135deg,#8d7b74,#b59d94);box-shadow:none;z-index:5;white-space:nowrap;transition:left .35s,top .35s,transform .3s}
+#wa{text-decoration:none;display:none;align-items:center}
+#vid{width:min(92vw,420px);max-height:60vh;border-radius:24px;border:3px solid var(--sun);background:#000;box-shadow:0 16px 40px rgba(74,36,23,.25)}
+.lead{font-family:'Pacifico',cursive;font-size:clamp(1.3rem,5vw,2rem);max-width:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fall{display:none}}
+</style>
+</head>
+<body>
+<div class="fall" id="fall" aria-hidden="true"></div>
+
+<main>
+<section class="stage active" id="s0">
+  <div class="bouquet" aria-hidden="true"><span>🌷</span><span>🌸</span><span>🌹</span><span>🌻</span><span>💐</span></div>
+  <h1 id="introTitle"></h1>
+  <button class="env" id="env" aria-label="Buka surat"><div class="letter">💌</div><div class="flap"></div><div class="seal">💖</div></button>
+  <p>Ketuk amplopnya ya 🍫</p>
+</section>
+
+<section class="stage" id="s1">
+  <div class="card" id="card"><div class="big" id="cEmoji"></div><p id="cText"></p></div>
+  <div class="dots" id="dots"></div>
+  <button class="btn" id="next">Lanjut</button>
+</section>
+
+<section class="stage" id="sv">
+  <p id="vCap" class="lead"></p>
+  <video id="vid" controls playsinline preload="metadata"></video>
+  <button class="btn" id="vNext">Lanjut 💗</button>
+</section>
+
+<section class="stage" id="s2">
+  <div class="bouquet" aria-hidden="true"><span>🍫</span><span>🌹</span><span>💖</span><span>🌷</span><span>🍫</span></div>
+  <h1 id="ask"></h1>
+  <div class="row" id="row">
+    <button class="btn" id="yes">Mau 💖</button>
+    <button class="btn" id="no">Tidak 😢</button>
+  </div>
+</section>
+
+<section class="stage" id="s3">
+  <div class="bouquet" aria-hidden="true"><span>🎉</span><span>💐</span><span>💕</span><span>🍫</span><span>🎉</span></div>
+  <h1 id="thanks"></h1>
+  <a class="btn alt" id="wa" target="_blank" rel="noopener">Kirim jawabanmu ke aku 💌</a>
+</section>
+</main>
+
+<script>
+// ====== EDIT DI SINI ======
+const CONFIG = {
+  wa: "62812xxxxxxxx", // nomor WhatsApp kamu (format 62…); kalau belum diisi angka, tombol WA otomatis disembunyikan
+  waText: "Aku mau jadi pacarmu 💖",
+  video: "", // nama file video, misalnya "kita.mp4" (taruh di folder yang sama dengan index.html); kosongkan kalau tidak pakai video
+  videoCaption: "Kenangan kita 🎬",
+  intro: "Hai Amel 👋 ada sesuatu buat kamu…",
+  pesan: [
+    { e: "🌷", t: "Kamu itu kayak bunga, bikin hari-hariku lebih berwarna." },
+    { e: "🍫", t: "Senyum kamu lebih manis dari coklat apa pun." },
+    { e: "💕", t: "Aku nyaman banget tiap ngobrol sama kamu." },
+    { e: "🌻", t: "Ada satu hal yang pengin aku tanyain ke kamu…" }
+  ],
+  tanya: "Amel, maukah kamu jadi pacarku? 💐",
+  tidak: ["Yakin? 🥺", "Coba pikir lagi 🥺", "Dikasih coklat deh 🍫", "Aku bawain bunga lho 🌷", "Jangan gitu dong 😭", "Pencet yang satunya aja 💖"],
+  selamat: "Yeay! Makasih ya Amel, aku sayang kamu 💕"
+};
+// ==========================
+
+const $ = id => document.getElementById(id);
+const rnd = (a, b) => a + Math.random() * (b - a);
+const fall = $("fall");
+const FLOWERS = ["🌸", "🌷", "🌹", "🌻", "💐", "🌼"];
+const MIX = [...FLOWERS, "🍫", "💖", "🎉", "🍫"];
+
+// kelopak & coklat melayang di background (hanya 16 elemen supaya ringan)
+for (let i = 0; i < 16; i++) {
+  const s = document.createElement("span");
+  s.textContent = i % 4 === 3 ? "🍫" : FLOWERS[i % FLOWERS.length];
+  s.style.cssText = `left:${rnd(0, 96)}%;font-size:${rnd(1, 1.9)}rem;opacity:.75;animation-duration:${rnd(9, 17)}s;animation-delay:-${rnd(0, 16)}s;--dx:${rnd(-60, 60)}px`;
+  fall.appendChild(s);
+}
+
+function burst(n) {
+  for (let i = 0; i < n; i++) {
+    const s = document.createElement("span");
+    s.className = "once";
+    s.textContent = MIX[Math.floor(rnd(0, MIX.length))];
+    const d = rnd(2.5, 5.5);
+    s.style.cssText = `left:${rnd(0, 96)}%;font-size:${rnd(1.2, 2.4)}rem;animation-duration:${d}s;animation-delay:${rnd(0, 1.5)}s;--dx:${rnd(-120, 120)}px`;
+    fall.appendChild(s);
+    setTimeout(() => s.remove(), (d + 1.6) * 1000);
+  }
+}
+
+function go(id) {
+  document.querySelectorAll(".stage").forEach(el => el.classList.toggle("active", el.id === id));
+  window.scrollTo(0, 0);
+}
+
+// 0. Intro
+$("introTitle").textContent = CONFIG.intro;
+$("env").addEventListener("click", function () {
+  this.classList.add("open");
+  setTimeout(() => { go("s1"); show(0); }, 1300);
+}, { once: true });
+
+// 1. Pesan
+let idx = 0;
+CONFIG.pesan.forEach(() => $("dots").appendChild(document.createElement("i")));
+function show(i) {
+  idx = i;
+  const m = CONFIG.pesan[i];
+  $("cEmoji").textContent = m.e;
+  $("cText").textContent = m.t;
+  const c = $("card");
+  c.classList.remove("pop"); void c.offsetWidth; c.classList.add("pop");
+  [...$("dots").children].forEach((d, k) => d.classList.toggle("on", k === i));
+  $("next").textContent = i === CONFIG.pesan.length - 1 ? "Aku siap 💗" : "Lanjut";
+}
+$("next").addEventListener("click", () => {
+  if (idx < CONFIG.pesan.length - 1) show(idx + 1);
+  else go(CONFIG.video ? "sv" : "s2");
+});
+
+// Video kenangan (opsional)
+$("vCap").textContent = CONFIG.videoCaption;
+if (CONFIG.video) $("vid").src = CONFIG.video;
+$("vNext").addEventListener("click", () => { $("vid").pause(); go("s2"); });
+
+// 2. Pertanyaan
+$("ask").textContent = CONFIG.tanya;
+const yes = $("yes"), no = $("no");
+let n = 0;
+const overlap = (a, b) => !(a.right < b.left || a.left > b.right || a.bottom < b.top || a.top > b.bottom);
+function dodge(e) {
+  if (e) e.preventDefault();
+  n++;
+  no.textContent = CONFIG.tidak[(n - 1) % CONFIG.tidak.length];
+  no.style.transform = `scale(${Math.max(0.6, 1 - n * 0.07)})`;
+  yes.style.fontSize = Math.min(1.2 + n * 0.28, 3.4) + "rem";
+  no.style.position = "fixed";
+  const w = no.offsetWidth, h = no.offsetHeight, m = 10;
+  const yr = yes.getBoundingClientRect();
+  let x, y, tries = 0;
+  do {
+    x = rnd(m, Math.max(m, innerWidth - w - m));
+    y = rnd(m, Math.max(m, innerHeight - h - m));
+    tries++;
+  } while (tries < 20 && overlap({ left: x, right: x + w, top: y, bottom: y + h }, yr));
+  no.style.left = x + "px";
+  no.style.top = y + "px";
+}
+no.addEventListener("pointerenter", e => { if (e.pointerType === "mouse") dodge(e); });
+no.addEventListener("pointerdown", dodge);
+no.addEventListener("click", e => e.preventDefault());
+
+// 3. Perayaan
+yes.addEventListener("click", () => {
+  go("s3");
+  $("thanks").textContent = CONFIG.selamat;
+  if (/^\d{8,}$/.test(CONFIG.wa)) {
+    const a = $("wa");
+    a.href = "https://wa.me/" + CONFIG.wa + "?text=" + encodeURIComponent(CONFIG.waText);
+    a.style.display = "inline-flex";
+  }
+  burst(60);
+  let r = 0;
+  const t = setInterval(() => { burst(25); if (++r > 5) clearInterval(t); }, 2200);
+});
+</script>
+</body>
+</html>
